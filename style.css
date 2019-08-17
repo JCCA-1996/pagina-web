@@ -13,6 +13,11 @@ p {
     margin-bottom: 0;
 }
 
+/*padding: 100px 0; -> 120px espaciado arriba & abajo, 0 de los lados.*/
+section {
+    padding: 100px 0;
+}
+
 .topmargin-xs { margin-top: 15px; }
 .topmargin-sm { margin-top: 30px; }
 .topmargin-lg { margin-top: 60px; }
@@ -49,11 +54,11 @@ p {
 .navbar-toggler:focus { outline: none; }
 
 #jc {
-    background-image: url('images/dev.jpg');
-    background-size: cover, auto;
+    background-image: url('images/1.jpg');
+    background-size: cover;
     background-repeat: no-repeat;
     padding-top: 90px;
-    min-height: 600px;
+    min-height: 700px;
     color: #ffffff;
 }
 
@@ -66,6 +71,48 @@ p {
     margin: 0 auto 60px auto;
     text-align: center;
     padding-top: 5%;
+}
+
+.portfolio-container img {
+    -moz-transition: all 0.8s;
+    -webkit-transition: all 0.8s;
+    transition: all 0.8s;
+}
+
+.portfolio-container:hover img {
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+.portfolio-container {
+    position: relative;
+    overflow: hidden;
+    margin: 10px 0;
+    border-radius: 2px;
+}
+
+/*position: absolute; -> se muestra encima de la imagen el texto.
+  bottom: 25px;       -> para que el texto quede en la parte de abajo de la imagen.*/
+.portfolio-details {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    z-index: 9000;
+}
+
+/*sacar espacio entre el titulo y la descripción*/
+.portfolio-details h2 {
+    margin-bottom: 0px;
+}
+
+.portfolio-details a h2, .portfolio-details a p {
+    color: #ffffff;
+}
+
+/*para sacar las lineas debajo de los textos*/
+a:hover {
+    text-decoration: none;
 }
 
 /*media queries bootstrap*/
